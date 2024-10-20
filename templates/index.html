@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anjali - Personal Portfolio</title>
+
+  <!-- - favicon-->
+  <link rel="shortcut icon" href="{{ url_for('static', filename='images/logo.ico') }}" type="image/x-icon">
+  
+  <!--- custom css link-->
+  <link rel="stylesheet" href="{{ url_for('static', filename='assets/css/style.css') }}">
+
+  <!-- - google font link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+
+
+
+<body>
+  <!-- - #MAIN-->
+  <main>
+    <!-- - #SIDEBAR-->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="{{ url_for('static', filename='images/anjali_photo.png') }}" alt="My Avatar">
+        </figure>        
+      <div class="info-content">
+          <h1 class="name" title="Anjali Punsi">Anjali Punsi</h1>
+          <h1 class="title" style="font-size: 15px; color: var(--white-2);">Data Engineer</h1>
+        </div>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
+            <div class="contact-info">
+              <p class="contact-title">Email</p><a href="mailto:anjalipunsi2@gmail.com"
+                class="contact-link">anjalipunsi2@gmail.com</a>
+            </div>
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+91-9579482628" class="contact-link">+91-9579482628</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">November 20 , 2002</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Ulhasnagar , Mumbai , Maharashtra , India </address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+          <!-- LinkedIn -->
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/anjalipunsi12/" class="social-link">
+              <img src="https://img.icons8.com/ios-filled/50/f0db4f/linkedin.png" alt="LinkedIn"
+                style="width: 24px; height: 24px;" />
+            </a>
+          </li>
+
+          <!-- Instagram -->
+          <li class="social-item">
+            <a href="https://www.instagram.com/punsi_anjali/profilecard/?igsh=MTlsMnlkbGZreHYwOQ==" class="social-link">
+              <img src="https://img.icons8.com/ios-filled/50/f0db4f/instagram-new.png" alt="Instagram"
+                style="width: 24px; height: 24px;" />
+            </a>
+          </li>
+
+          <!-- WhatsApp -->
+          <li class="social-item">
+            <a href="https://wa.me/qr/W3FG7EH6LH2LJ1" class="social-link">
+              <img src="https://img.icons8.com/ios-filled/50/f0db4f/whatsapp.png" alt="WhatsApp"
+                style="width: 24px; height: 24px;" />
+            </a>
+          </li>
+
+          <!-- GitHub -->
+          <li class="social-item">
+            <a href="https://github.com/anjipunsi" class="social-link">
+              <img src="https://img.icons8.com/ios-filled/50/f0db4f/github.png" alt="GitHub"
+                style="width: 24px; height: 24px;" />
+            </a>
+          </li>
+        </ul>
+
+
+
+
+      </div>
+    </aside>
+    <!-- - #main-content-->
+    <div class="main-content">
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <button class="navbar-link active" data-nav-link>About</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Skills</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Courses</button>
+          </li>
+          
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+        </ul>
+      </nav>
+
+
+      <!--- #ABOUT-->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+
+
+
+          <section class="about-text">
+            <p>
+              Hello! I’m Anjali Punsi, a passionate Software Developer skilled in both Back-End and Front-End
+              technologies. I specialize in building robust web applications and have strong proficiency in data
+              analysis and visualization.
+            </p>
+
+            <p>
+              My technical expertise includes C, Python, HTML, CSS, JavaScript, SQL, NumPy, Pandas, Matplotlib,
+              Bootstrap, and Django. I work with tools like VS Code, Git, GitHub, and PyCharm, and have a solid
+              foundation in data validation, user authentication, and responsive design, allowing me to create
+              intuitive, user-friendly solutions.
+            </p>
+
+            <p>
+              As a Software Engineer, I excel at solving complex challenges and delivering efficient, user-centered
+              applications. In Data Engineering, I focus on building and optimizing data pipelines, using technologies
+              like Kafka, Confluent, and AWS to turn raw data into actionable insights.
+            </p>
+
+            <p>
+              With strong project management skills, I thrive in collaborative environments and am committed to
+              continuous learning. I actively contribute to open-source projects and am eager to explore opportunities
+              in both software development and data engineering where I can make a meaningful impact.
+            </p>
+
+            <p>
+              Feel free to connect with me on <a href="https://www.linkedin.com/in/anjalipunsi12/" class="custom-link"
+                target="_blank">LinkedIn</a> or check out my work on <a href="https://github.com/anjalipunsi"
+                class="custom-link" target="_blank">GitHub</a>
+            </p>
+          </section>
+
+          <style>
+            .about-text {
+              font-size: 15px;
+              /* Increase font size for general text */
+              line-height: 1.6;
+              /* Improve readability */
+            }
+
+            .custom-link {
+              font-size: 20px;
+              color: #fff;
+              text-decoration: none;
+              padding: 5px 10px;
+              border-radius: 5px;
+              background-color: #000;
+            }
+
+            .custom-link:hover {
+              color: #f0db4f;
+              background-color: #333;
+            }
+          </style>
+
+
+
+
+          <!--
+          - service
+        -->
+
+          <section class="service">
+            <h3 class="h3 service-title">What I'm Doing</h3>
+
+            <ul class="service-list">
+
+              <!-- Web Development -->
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="https://img.icons8.com/ios-filled/50/f0db4f/code.png" alt="Web Development icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Web Development</h4>
+                  <p class="service-item-text">
+                    Creating robust and dynamic web applications using HTML, CSS, JavaScript, and Django.
+                  </p>
+                </div>
+              </li>
+
+              <!-- Data Engineering -->
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="https://img.icons8.com/ios-filled/50/f0db4f/server.png" alt="Data Engineering icon"
+                    width="40">
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Data Engineering</h4>
+                  <p class="service-item-text">
+                    Building and optimizing data pipelines using Kafka, AWS, and Confluent for efficient data flow.
+                  </p>
+                </div>
+              </li>
+
+              <!-- Data Analysis -->
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="https://img.icons8.com/ios-filled/50/f0db4f/combo-chart.png" alt="Data Analysis icon"
+                    width="40">
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">Data Analysis</h4>
+                  <p class="service-item-text">
+                    Using Python libraries like Pandas and NumPy for comprehensive data analysis and visualization.
+                  </p>
+                </div>
+              </li>
+
+              <!-- UI/UX Design -->
+              <li class="service-item">
+                <div class="service-icon-box">
+                  <img src="https://img.icons8.com/ios-filled/50/f0db4f/design.png" alt="UI/UX Design icon" width="40">
+                </div>
+                <div class="service-content-box">
+                  <h4 class="h4 service-item-title">UI/UX Design</h4>
+                  <p class="service-item-text">
+                    Designing user-friendly interfaces and experiences that improve user satisfaction.
+                  </p>
+                </div>
+              </li>
+
+            </ul>
+          </section>
+
+          <!--
+          - testimonials modal
+        -->
+
+          <div class="modal-container" data-modal-container>
+
+            <div class="overlay" data-overlay></div>
+
+            <section class="testimonials-modal">
+
+              <button class="modal-close-btn" data-modal-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+
+              <div class="modal-img-wrapper">
+                <figure class="modal-avatar-box">
+                  <img src="{{ url_for('static', filename='images/avatar-1.png') }}" alt="Daniel Lewis" width="80" data-modal-img>
+                </figure>
+
+                <figure class="quote-icon">
+<img src="{{ url_for('static', filename='images/icon-quote.svg') }}" alt="Quote Icon">
+              </figure>
+                            </div>
+
+              <div class="modal-content">
+
+                <h4 class="h3 modal-title" data-modal-title>Anjali</h4>
+
+                <time datetime="2021-06-14">14 June, 2021</time>
+
+                <div data-modal-text>
+                  <p>
+                    Anjali was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+      </article>
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Bachelor of Engineering in Information Technology</h4>
+              <span>Vivekanand Education Society Institute of Technology, Mumbai</span>
+              <span>Expected Graduation: 2024</span>
+              <span>SGPI - 8.36 / 10</span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Higher Secondary Certificate</h4>
+              <span>R.K.Talreja College of Science, Ulhasnagar</span>
+              <span>2018 - 2020</span>
+              <span>Examination Score - 58.77%</span>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Secondary Certificate</h4>
+              <span>Pet Oxford High School, Ulhasnagar</span>
+              <span>2018 - 2020</span>
+              <span>Examination Score - 66.80%</span>
+            </li>
+          </ol>
+        </section>
+
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Data Engineer Intern</h4>
+              <span>Go Digital Technology Consulting LLP (Location)</span>
+              <!-- Replace with the actual location if needed -->
+              <span>May 2024 - September 2024</span>
+              <p class="timeline-text">
+                As a Data Engineer Intern at Go Digital, I focused on enhancing data pipeline efficiency using Kafka,
+                Confluent, and automation tools. I worked with AWS services, including Amazon RDS and AWS Lambda, to
+                manage and optimize data flow, enabling data-driven decision-making and improving overall system
+                performance.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Growth Manager Intern</h4>
+              <span>Prepinsta Prime Club (Mumbai)</span>
+              <span>March 2024 - Ongoing (6 Months)</span>
+              <p class="timeline-text">
+                As a Growth Manager Intern at PrepInsta, I contributed to digital marketing strategies, conducted market
+                research, and supported product launches, driving brand awareness and user acquisition.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Web Developer Intern</h4>
+              <span>Bharat Intern (Mumbai)</span>
+              <span>August 2023 - September 2023</span>
+              <p class="timeline-text">
+                Provided valuable insights into data validation, user authentication, and responsive design principles.
+                Attended regular training to broaden web development capabilities.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Web Developer Intern</h4>
+              <span>Prodigy Infotech (Mumbai)</span>
+              <span>August 2023 - September 2023</span>
+              <p class="timeline-text">
+                Played a key role in building essential components, including a secure and user-friendly login page and
+                other related features. Gained valuable insights into data validation, user authentication, and
+                responsive
+                design principles.
+              </p>
+            </li>
+
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Web Developer Intern</h4>
+              <span>Techneohacks - Official (Mumbai)</span>
+              <span>July 2023 - August 2023</span>
+              <p class="timeline-text">
+                Participated in pre-project analysis and technical assessments to validate the creation of a
+                user-friendly
+                interface.
+              </p>
+            </li>
+          </ol>
+      </article>
+
+
+      <article class="skills" data-page="skills">
+        <header>
+          <h2 class="h2 article-title">Skills</h2>
+        </header>
+        <section class="skills-content">
+          <ul class="skills-list">
+            <li class="skills-item">
+              <h4 class="h4 skills-item-title">Languages</h4>
+              <p>C, Python, SQL</p>
+            </li>
+            <li class="skills-item">
+              <h4 class="h4 skills-item-title">Web Development</h4>
+              <p>HTML, CSS, JavaScript, Django, Bootstrap</p>
+            </li>
+            <li class="skills-item">
+              <h4 class="h4 skills-item-title">Database Management</h4>
+              <p>MySQL, PostgreSQL</p>
+            </li>
+            <li class="skills-item">
+              <h4 class="h4 skills-item-title">Data Analysis</h4>
+              <p>NumPy, Pandas, Matplotlib, Streamlit</p>
+            </li>
+            <li class="skills-item">
+              <h4 class="h4 skills-item-title">Data Engineering</h4>
+              <p>Pyspark, Kafka, Confluent, Glue, Vault, S3, Hadoop</p>
+            </li>
+            <li class="skills-item">
+              <h4 class="h4 skills-item-title">Cloud Technologies</h4>
+              <p>AWS (S3, Glue)</p>
+            </li>
+            <li class="skills-item">
+              <h4 class="h4 skills-item-title">Tools</h4>
+              <p>VS Code, Git, GitHub, PyCharm, Docker</p>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-select-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+            </ul>
+          </div>
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="{{ url_for('static', filename='images/project-3.jpg') }}" alt="Shopstopper" loading="lazy">
+                </figure>
+                <h3 class="project-title">Shopstopper</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="#">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="{{ url_for('static', filename='images/project-4.png') }}" alt="Stock Price Prediction" loading="lazy">
+                </figure>
+                <h3 class="project-title">Stock Price Prediction</h3>
+                <p class="project-category">Web development</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- Courses Section -->
+      <article class="courses-section" data-page="courses">
+
+<section id="courses" style="margin: 20px; color: white;">
+  <ul style="list-style-type: none; padding: 0;">
+    <header>
+      <h2 class="h2 article-title">Courses</h2>
+    </header>
+    <li style="font-size: 1em;">• Google Technical Support Fundamentals - <a href="https://www.coursera.org/account/accomplishments/verify/CPU67PMGR4EW" target="_blank" style="color: lightblue; text-decoration: underline; display: inline;">View Certificate</a></li>
+    <li style="font-size: 1em;">• Foundations of Project Management - <a href="https://www.coursera.org/account/accomplishments/verify/CPU67PMGR4EW" target="_blank" style="color: lightblue; text-decoration: underline; display: inline;">View Certificate</a></li>
+    <li style="font-size: 1em;">• Programming with Python: Completed an intensive training course - <a href="https://trainings.internshala.com/verify-certificate/?certificate_number=BA8504DC-31A4-560A-EA50-723F78D26" target="_blank" style="color: lightblue; text-decoration: underline; display: inline;">View Certificate</a></li>
+    <li style="font-size: 1em;">• Communication Skills - TCS iON Digital Learning Hub - <a href="https://drive.google.com/file/d/1J93tyIKy7yNoFeLVs8t9vAzZadAZ1z_j/view?usp=sharing" target="_blank" style="color: lightblue; text-decoration: underline; display: inline;">View Certificate</a></li>
+    <li style="font-size: 1em;">• Introduction to Generative AI with Google Cloud - <a href="https://cloudskillsboost.google/public_profiles/2abfb692-9a4c-4a71-b5a3-8c5ffb860532/badges/6371971?utm_medium=social&utm_source=linkedin&utm_campaign=ql-social-share" target="_blank" style="color: lightblue; text-decoration: underline; display: inline;">View Badge</a></li>
+</ul>
+</section>
+
+<section id="leadership-activities" style="margin: 20px; color: white;">
+  <header>
+    <h2 class="h2 article-title">leadership-activities</h2>
+  </header>  <ul style="list-style-type: none; padding: 0;">
+      <li style="font-size: 1em;">• HackerRank: Achieved 3 Stars in competitive programming.</li>
+        <li style="font-size: 1em;">• Codegoda 2023: Participated in a national-level coding competition - <a href="https://unstop.com/certificate-preview/107b64c2-2b30-455f-84ee-52410b23535f?utm_campaign=site-emails" target="_blank" style="color: lightblue; text-decoration: underline; display: inline;">View Certificate</a></li>
+        <li style="font-size: 1em;">• Tata Cybersecurity Security Analyst Job Simulation: Completed a job simulation focused on cybersecurity - <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Tata/gmf3ypEXBj2wvfQWC_Tata%20Group_LML7Wa9uKFfYRwHxC_1708507636695_completion_certificate.pdf" target="_blank" style="color: lightblue; text-decoration: underline; display: inline;">Certificate</a></li>
+        <li style="font-size: 1em;">• Accenture North America Data Analytics and Visualization Job Simulation: Completed a job simulation focused on data analytics - <a href="https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Accenture%20North%20America/hzmoNKtzvAzXsEqx8_Accenture%20North%20America_LML7Wa9uKFfYRwHxC_1687519816897_completion_certificate.pdf" target="_blank" style="color: lightblue; text-decoration: underline; display: inline;">Certificate</a></li>
+        <li style="font-size: 1em;">• Article “Robots - Yesterday, Today and Tomorrow”: Contributed an article to the college magazine - <a href="https://github.com/anjipunsi/anjali-magazine" target="_blank" style="color: lightblue; text-decoration: underline; display: inline;">View Magazine</a></li>
+    </ul>
+</section>
+</article>
+
+
+
+
+
+      <article class="contact-section" data-page="contact">
+        <header>
+            <h1 style="color: white;">CONTACT US</h1> <!-- Set header text color to white -->
+        </header>
+    
+        <form action="/submit_message" method="POST" class="contact-form" id="contactForm">
+            <label for="fullname" style="color: white;">Full Name:</label><br />
+            <input type="text" id="fullname" name="fullname" class="contact-input" placeholder="Enter your full name" required /><br />
+    
+            <label for="email" style="color: white;">Email Address:</label><br />
+            <input type="email" id="email" name="email" class="contact-input" placeholder="Enter your email" required /><br />
+    
+            <label for="message" style="color: white;">Your Message:</label><br />
+            <textarea id="message" name="message" class="contact-textarea" rows="4" placeholder="Type your message" required></textarea><br />
+    
+            <input type="submit" style="color: white;" value="Send Message" class="contact-submit-btn" />
+        </form>
+        <style>
+            /* Set input and textarea text color to white */
+            .contact-input, .contact-textarea {
+                background-color: #444; /* Dark background for inputs */
+                color: white; /* White text color inside the input */
+                border: 1px solid #555; /* Add a subtle border */
+            }
+    
+            /* Set placeholder text color to white */
+            ::placeholder {
+                color: white; /* White placeholder text */
+                opacity: 0.6; /* Slightly transparent to differentiate from input text */
+            }
+        </style>
+        
+      
+    </article>
+    
+    </div>
+  </main>
+  <script src="{{ url_for('static', filename='js/script.js') }}" defer></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
