@@ -27,6 +27,8 @@ def submit_message():
 
     print(f"Inserting: {fullname}, {email}, {message}")
 
+    connection = None  # Initialize connection
+
     try:
         connection = mysql.connector.connect(**db_config)
         cursor = connection.cursor()
@@ -41,7 +43,7 @@ def submit_message():
         return "Failed to submit message.", 500
 
     finally:
-        if connection.is_connected():
+        if connection and connection.is_connected():
             cursor.close()
             connection.close()
 
@@ -92,9 +94,6 @@ def success():
         </body>
     </html>
     '''
-
-if __name__ == '__main__':
-    app.run(debug=True)
 
 @app.route('/healthz')
 def health_check():
