@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
-import mysql.connector
+import psycopg2  # Use psycopg2 for PostgreSQL
 import os
 from dotenv import load_dotenv
 
@@ -7,12 +7,13 @@ load_dotenv()  # Load environment variables from .env file
 
 app = Flask(__name__)
 
-# MySQL database configuration from environment variables
+# PostgreSQL database configuration from environment variables
 db_config = {
     'host': os.getenv('DB_HOST', 'localhost'),
-    'user': os.getenv('DB_USER', 'root'),
-    'password': os.getenv('DB_PASSWORD', 'roottest@1234'),
-    'database': os.getenv('DB_NAME', 'contact_form_db')
+    'user': os.getenv('DB_USER', 'contact_form_db_user'),
+    'password': os.getenv('DB_PASSWORD', 'N7xmlnv00dYMvGGClGMgCflzkUJlztyE'),
+    'dbname': os.getenv('DB_NAME', 'contact_form_db'),
+    'port': 5432
 }
 
 @app.route('/')
@@ -30,7 +31,7 @@ def submit_message():
     connection = None  # Initialize connection
 
     try:
-        connection = mysql.connector.connect(**db_config)
+        connection = psycopg2.connect(**db_config)  # Change to psycopg2
         cursor = connection.cursor()
         cursor.execute("INSERT INTO contact_messages (fullname, email, message) VALUES (%s, %s, %s)", 
                        (fullname, email, message))
@@ -38,12 +39,12 @@ def submit_message():
         print("Data inserted successfully")
         return redirect(url_for('success'))
 
-    except mysql.connector.Error as err:
+    except psycopg2.Error as err:  # Change error handling
         print(f"Error: {err}")
         return "Failed to submit message.", 500
 
     finally:
-        if connection and connection.is_connected():
+        if connection:
             cursor.close()
             connection.close()
 
